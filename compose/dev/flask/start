@@ -1,0 +1,8 @@
+#! /usr/bin/env sh
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+flask db upgrade
+python wsgi.py -b 0.0.0.0:5000

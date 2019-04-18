@@ -3,7 +3,7 @@
 """
 import os
 
-DEBUG = os.environ['DEBUG']
+DEBUG = int(os.environ['DEBUG'])
 
 if DEBUG:
     from .dev import Config
